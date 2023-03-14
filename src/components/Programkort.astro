@@ -1,0 +1,27 @@
+---
+const { eventName, stage, time, group, link, billede } = Astro.props;
+---
+
+<a href={link}>
+  <article>
+    <img src={billede} alt="" />
+    <div>
+      <h2>{eventName}</h2>
+      <p>{stage}</p>
+      <p>{time}</p>
+      <p>{group}</p>
+    </div>
+  </article>
+</a>
+
+<style>
+  article {
+    background-color: pink;
+    border-radius: 20px;
+  }
+
+  div {
+    text-align: center;
+    justify-content: center;
+  }
+</style>
