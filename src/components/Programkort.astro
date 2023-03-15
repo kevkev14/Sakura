@@ -1,8 +1,8 @@
 ---
+import styles from "../styles/styles.css"
 const { eventName, stage, time, group, link, billede } = Astro.props;
 ---
 
-<a href={link}>
   <article>
     <img src={billede} alt="" />
     <div>
@@ -10,18 +10,36 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
       <p>{stage}</p>
       <p>{time}</p>
       <p>{group}</p>
+      <a class="selectProgram" href=""><span>Select Program</span> </a>
+      
     </div>
+    
+    
   </article>
-</a>
+
 
 <style>
   article {
     background-color: pink;
+    padding: 1rem;
     border-radius: 20px;
+    
   }
 
   div {
     text-align: center;
     justify-content: center;
   }
+
+  .selectProgram{
+    text-align: center;
+  background-color: #bf4565;
+  padding: 1rem 10rem 1rem 10rem;
+  
+}
+
+span{
+  color: white;
+  font-size: large;
+}
 </style>

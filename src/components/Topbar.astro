@@ -1,56 +1,53 @@
 ---
 import Button from "./Button.astro";
+import jQuery from "jquery";
 ---
 
-<nav class="navbar">
-  <div class="max-width">
-    <div class="logo">
-      <a href="index.html"><img src="img/Asset 1.svg" alt="logo" /></a>
+<div class="container">
+  <div class="logo"><a href="index.html">
+    <img src="src/imgs/logo.svg" alt="" width="130"/>
+  </a>
     </div>
-    <ul class="menu">
-      <li><a href="kategori.html" class="menu-btn">Program</a></li>
-      <li><a href="kategori.html" class="menu-btn">My Program</a></li>
+  <nav>
+    <ul>
+    <li>Home</li>
+    <li>Program</li>
+    <li>My Program</li>
+    <li>About Us</li>
     </ul>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
+    </nav>
   </div>
-</nav>
+  <hr />
 
 <style>
-  .navbar {
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+*{transition:all 0.3s ease-in-out;}
 
-  .navbar .menu li {
-    list-style: none;
-    display: inline-block;
-  }
-  .navbar .max-width {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f7f5f7;
-    /* background: #eae9ea; */
-  }
+.container{
+  clear:both;
+  overflow:auto;
+  background-color: pink;
+}
 
-  .navbar .menu li a {
-    display: block;
-    color: #2c5e85;
-    text-decoration: none;
-    font-size: 40px;
-    font-weight: 700;
-    margin-left: 960px;
-    transition: color 0.3s ease;
-    font-family: "elza-text", sans-serif;
-    font-style: normal;
-  }
+nav{
+  float:right;
+}
 
-  .navbar .menu li a:hover {
-    color: crimson;
-  }
+.logo img{
+  float:left;
+}
+
+ul li{
+  display: inline-block;
+  padding:10px;
+  font-size:20px; 
+  font-family:raleway;
+  color: #534741;
+  
+}
+
+ul li:hover{
+  color:orange;
+  
+}
+
 </style>
