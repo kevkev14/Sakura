@@ -1,63 +1,110 @@
+<!-- FRONTPAGE BANNER CARD START -->
+<div class="card">
+  <div class="box2">
+    <!-- HVERT BILLEDE HAR EN WIDTH PÅ 700 I SQUUOSH -->
+    <img src="billeder/landing_1.svg" alt="landing1" class="fpimg" />
+  </div>
+  <div class="box2 txtbox">
+    <h1 style="padding-top: 35%;">Sakura Festival</h1>
+  </div>
+</div>
+<!-- FRONTPAGE BANNER CARD END -->
 <!-- CARD NUMBER 1 START -->
 <div class="card">
-  <div class="box">
-    <img src="billeder/forside1.webp" alt="forside1" class="responsive" />
-  </div>
-  <div class="box">
-    <h1>Program 2023</h1>
+  <div class="box txtbox1">
+    <h1>My program</h1>
     <p>We are proud to present ... <br /> ipsum dolor sit amet consectetur adipisicing elit. Velit, minima ipsum ipsam quibusdam eos debitis eveniet soluta nobis doloribus deserunt!</p>
     <button>BUTTON</button>
+  </div>
+  <div class="box">
+    <!-- HVERT BILLEDE HAR EN WIDTH PÅ 700 I SQUUOSH -->
+    <img src="billeder/forside1.webp" alt="forside3" class="fpimg" />
   </div>
 </div>
 <!-- CARD NUMBER 1 END -->
 <!-- CARD NUMBER 2 START -->
 <div class="card">
-  <div class="box">
+  <div class="box2">
+    <!-- HVERT BILLEDE HAR EN WIDTH PÅ 700 I SQUUOSH -->
+    <img src="billeder/forside2.webp" alt="forside2" class="fpimg" />
+  </div>
+  <div class="box2 txtbox2">
     <h1>About us</h1>
     <p>We are proud to present ... <br /> ipsum dolor sit amet consectetur adipisicing elit. Velit, minima ipsum ipsam quibusdam eos debitis eveniet soluta nobis doloribus deserunt!</p>
     <button>BUTTON</button>
-  </div>
-  <div class="box">
-    <img src="billeder/forside2.webp" alt="forside2" class="responsive" />
   </div>
 </div>
 <!-- CARD NUMBER 2 END -->
 <!-- CARD NUMBER 3 START -->
 <div class="card">
-  <div class="box">
-    <img src="billeder/forside1.webp" alt="forside3" class="responsive" />
-  </div>
-  <div class="box">
+  <div class="box txtbox3">
     <h1>My program</h1>
     <p>We are proud to present ... <br /> ipsum dolor sit amet consectetur adipisicing elit. Velit, minima ipsum ipsam quibusdam eos debitis eveniet soluta nobis doloribus deserunt!</p>
     <button>BUTTON</button>
   </div>
+  <div class="box">
+    <!-- HVERT BILLEDE HAR EN WIDTH PÅ 700 I SQUUOSH -->
+    <img src="billeder/forside3.webp" alt="forside3" class="fpimg" />
+  </div>
 </div>
-
 <!-- CARD NUMBER 3 END -->
 <!-- ALT CSS STYLE SKRIVES INDENFOR DENNE -->
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap");
   body {
     width: 80%;
     margin: auto;
   }
   h1 {
-    font-family: herculum;
+    font-size: 300%;
+    font-family: "Eagle Lake", cursive;
   }
 
-  .card {
-    display: flex;
-    margin: auto;
-  }
-
-  .box {
-    flex: 50%;
-    padding: 5px;
-    text-align: center;
-  }
-  .responsive {
+  .fpimg {
     max-width: 100%;
     height: auto;
+    width: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card {
+    display: flex;
+  }
+  .box {
+    flex: 50%;
+    text-align: left;
+  }
+  .box2 {
+    flex: 50%;
+    text-align: right;
+  }
+  .txtbox {
+    position: relative;
+    text-align: center;
+  }
+  .txtbox1 {
+    position: relative;
+    text-align: center;
+    background-image: url(billeder/landing_2.svg);
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  .txtbox2 {
+    position: relative;
+    text-align: center;
+    background-image: url(billeder/landing_3.svg);
+    background-position-x: left;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  .txtbox3 {
+    position: relative;
+    text-align: center;
+    background-image: url(billeder/landing_4.svg);
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
   }
 </style>
 <!-- ALT CSS STYLE SKRIVES INDENFOR DENNE -->
