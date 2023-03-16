@@ -1,0 +1,83 @@
+---
+import { Debug } from "astro/components";
+import Topbar from "../components/Topbar.astro";
+import Programkort from "../components/Programkort.astro";
+const URL = "https://urmmxgualjwoaryoaljr.supabase.co/rest/v1/Program";
+import styles from "../styles/styles.css"
+
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVybW14Z3VhbGp3b2FyeW9hbGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODAyMzksImV4cCI6MTk5NDM1NjIzOX0.gxnwEN_65Q4ArY5BJ1nwuR2geqDSBN0JEUKN_Ou3xVA",
+  },
+};
+
+const response = await fetch(URL, options);
+const data = await response.json();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+      <Topbar />
+    <main>
+      <h1>Program 2023</h1>
+      <p>We are proud to present the official program for the 2023 edition of Copenhagen Sakura Festival! </p>
+      <h2>Main</h2>
+      <div class="mainGrid">
+        {
+        data.map((program) =>
+         <Programkort 
+         link={"/program" + program.id} 
+         eventName={program.eventName} 
+         stage={program.stage} 
+         time={program.time} />
+         )}
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+  .mainGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  
+    gap: 10rem;
+    margin: 5rem;
+  }
+
+  main{
+    display:flex;
+    flex-direction:column; 
+    justify-content:center;
+    min-height:100vh;
+  }
+
+  h1 {
+    font-family: 'Eagle Lake', cursive;
+    text-align: center;
+    color: #6A2132;
+  }
+
+  h2 {
+    font-family: 'Eagle Lake', cursive;
+    text-align: center;
+    color: #534741;
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+  }
+
+  p {
+    font-family: 'Calibri', cursive;
+    text-align: center;
+    color: #534741;;
+  }
+</style>
