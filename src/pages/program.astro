@@ -30,7 +30,7 @@ const data = await response.json();
       <h1>Program 2023</h1>
       <h3>プログラム</h3>
       <p>We are proud to present the official program for the 2023 edition of Copenhagen Sakura Festival!</p>
-      <h2>Dato</h2>
+      <h2>Main Stage</h2>
       <div class="mainGrid">
         {data.map((program) => <Programkort 
         link={"/program" + program.id} 
@@ -50,7 +50,7 @@ const data = await response.json();
   @import url("https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap");
   .mainGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(221px, 1fr));
 
     gap: 10rem;
     margin: 5rem;
