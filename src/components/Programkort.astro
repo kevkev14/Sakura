@@ -5,12 +5,13 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
 ---
 
   <article>
-    <img src={billede} alt="" />
-    <div>
+    
+    <div class="container">
+      <img class="image" src={billede} alt="" />
       <h2>{eventName}</h2>
-      <p>{stage}</p>
-      <p>{time}</p>
-      <p>{group}</p>
+      <p class="text">{stage}</p>
+      <p class="text">{time}</p>
+      <p class="text">{group}</p>
     </div>
     <a class="selectProgram" href={link}><span>Read More</span> </a>
   </article>
@@ -19,8 +20,8 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
   article {
-    background-color: pink;
     justify-content: center;
+    background-color: #f0e9eb;
     
   }
 
@@ -28,6 +29,14 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
     text-align: center;
     justify-content: center;
   }
+
+  img {
+    width: 100%;
+  }
+
+ 
+
+ 
 
   .selectProgram span{
     display: flex;
