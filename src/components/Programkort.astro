@@ -1,6 +1,7 @@
 ---
 import styles from "../styles/styles.css"
 const { eventName, stage, time, group, link, billede } = Astro.props;
+
 ---
 
   <article>
@@ -10,19 +11,20 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
       <p>{stage}</p>
       <p>{time}</p>
       <p>{group}</p>
-      <a class="selectProgram" href=""><span>Select Program</span> </a>
+      
       
     </div>
+    <a class="selectProgram" href=""><span>Select Program</span> </a>
     
     
   </article>
 
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
   article {
     background-color: pink;
-    padding: 1rem;
-    border-radius: 20px;
+    justify-content: center;
     
   }
 
@@ -31,15 +33,24 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
     justify-content: center;
   }
 
-  .selectProgram{
+  .selectProgram span{
+    display: flex;
     text-align: center;
-  background-color: #bf4565;
-  padding: 1rem 10rem 1rem 10rem;
+    justify-content: center;
+  
   
 }
+
+p, h2, span {
+    font-family: 'Calibri', cursive;
+    text-align: center;
+    color: #534741;;
+  }
 
 span{
   color: white;
   font-size: large;
+  background-color: #bf4565;
+  padding: 1rem;
 }
 </style>

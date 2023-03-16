@@ -30,18 +30,28 @@ const data = await response.json();
       <p>We are proud to present the official program for the 2023 edition of Copenhagen Sakura Festival! </p>
       <h2>Main</h2>
       <div class="mainGrid">
-        {data.map((program) => <Programkort link={"/program" + program.id} eventName={program.eventName} stage={program.stage} time={program.time} />)}
+        {
+        data.map((program) =>
+         <Programkort 
+         link={"/program" + program.id} 
+         eventName={program.eventName} 
+         stage={program.stage} 
+         time={program.time} />
+         )}
       </div>
     </main>
   </body>
 </html>
 
 <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
   .mainGrid {
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); */
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  
+    gap: 10rem;
+    margin: 5rem;
   }
 
   main{
@@ -52,11 +62,21 @@ const data = await response.json();
   }
 
   h1 {
+    font-family: 'Eagle Lake', cursive;
     text-align: center;
     color: #6A2132;
   }
 
+  h2 {
+    font-family: 'Eagle Lake', cursive;
+    text-align: center;
+    color: #534741;
+    margin-top: 5rem;
+    margin-bottom: -3rem;
+  }
+
   p {
+    font-family: 'Calibri', cursive;
     text-align: center;
     color: #534741;;
   }
