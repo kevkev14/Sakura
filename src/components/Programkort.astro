@@ -1,7 +1,6 @@
 ---
-import styles from "../styles/styles.css"
+import styles from "../styles/styles.css";
 const { eventName, stage, time, group, link, billede } = Astro.props;
-
 ---
 
   <article>
@@ -18,7 +17,7 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
 
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap");
   article {
     justify-content: center;
     background-color: #f0e9eb;
@@ -42,20 +41,24 @@ const { eventName, stage, time, group, link, billede } = Astro.props;
     display: flex;
     text-align: center;
     justify-content: center;
-  
-  
-}
-
-p, h2, span {
-    font-family: 'Calibri', cursive;
-    text-align: center;
-    color: #534741;;
   }
 
-span{
-  color: white;
-  font-size: large;
-  background-color: #bf4565;
-  padding: 1rem;
-}
+  p,
+  h2,
+  span {
+    font-family: "Calibri", cursive;
+    text-align: center;
+    color: #534741;
+  }
+
+  span {
+    color: white;
+    font-size: large;
+    background-color: #bf4565;
+    padding: 1rem;
+  }
+  body {
+    width: 80%;
+    margin: auto;
+  }
 </style>
