@@ -1,8 +1,11 @@
+<div class="line">
+  <img src="billeder/gren.svg" alt="" />
+</div>
 <div class="footer">
-  <div class="line"></div>
   <div class="footercontent">
     <div class="box1">
       <h1><i class="fa-solid fa-location-dot fa-sm" style="color: #DE5D73;"></i> Find us</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.892773482571!2d12.597081016086879!3d55.69085195423545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465252df6722ab2d%3A0xa3995aee90fb6778!2sLangelinie%20Park%2C%20Nordre%20Toldbod%2C%201259%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1679001661875!5m2!1sda!2sdk" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="box2">
       <h1><i class="fa-solid fa-phone fa-sm" style="color: #DE5D73;"></i> Contact</h1>
@@ -17,15 +20,17 @@
     </div>
     <div class="box4">
       <h1>Follow us</h1>
-      <i class="fa-brands fa-instagram fa-3x" style="color: #DE5D73;"></i>
-      <i class="fa-brands fa-facebook fa-3x" style="color: #DE5D73;"></i>
+      <a href="https://www.instagram.com/copenhagensakurafestival/"><i class="fa-brands fa-instagram fa-2x" style="color: #DE5D73;"></i></a>
+      <a href="https://www.facebook.com/groups/copenhagensakurafestival/media"><i class="fa-brands fa-facebook fa-2x" style="color: #DE5D73;"></i></a>
     </div>
   </div>
 </div>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap");
   .line {
-    background-image: url(billeder/gren.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: -4.5rem;
   }
   .footercontent {
     display: flex;
@@ -36,16 +41,19 @@
   .box4 {
     flex: 25%;
     text-align: center;
+    margin-top: 2.7rem;
   }
   h1 {
-    font-size: 150%;
+    color: #534741;
+    font-size: medium;
+
     font-family: "Eagle Lake", cursive;
   }
   p {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
   .footer {
-    height: 20rem;
+    height: 17rem;
     background-color: #f0e9eb;
   }
 </style>
