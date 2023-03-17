@@ -1,0 +1,33 @@
+---
+import Footer from "../../components/Footer.astro";
+import Topbar from "../../components/Topbar.astro";
+
+export async function getStaticPaths() {
+  const URL = "https://urmmxgualjwoaryoaljr.supabase.co/rest/v1/Program";
+
+  const options = {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVybW14Z3VhbGp3b2FyeW9hbGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODAyMzksImV4cCI6MTk5NDM1NjIzOX0.gxnwEN_65Q4ArY5BJ1nwuR2geqDSBN0JEUKN_Ou3xVA",
+    },
+  };
+
+  const response = await fetch(URL, options);
+  const data = await response.json();
+
+  return data.map((program) => {
+    return {
+      params: { slug: program.slug },
+      props: { program },
+    };
+  });
+}
+
+const { program } = Astro.props;
+---
+
+<Topbar />
+<section>
+  <h1>{program.navn}</h1>
+  <img src={`/billeder/${program.billede}`} alt="event Billede" />
+</section>
+<Footer />

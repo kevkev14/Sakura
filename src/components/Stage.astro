@@ -1,0 +1,19 @@
+---
+import Programkort from "../components/Programkort.astro";
+const { stages, stageTxt } = Astro.props;
+---
+
+<h2>{stageTxt}</h2>
+<div class="mainGrid">
+  {stages.map((program) => <Programkort link={"/underside/" + program.slug} eventName={program.eventName} stage={program.stage} time={program.time} billede={`/billeder/${program.billede}`} />)}
+  <!--    {stages.map((program) => <Programkort link={"/program" + program.id} eventName={program.eventName} stage={program.stage} time={program.time} billede={`/billeder/${program.billede}`} />)} -->
+</div>
+
+<style>
+  .mainGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(221px, 1fr));
+    gap: 10rem;
+    margin: 5rem;
+  }
+</style>
