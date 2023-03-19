@@ -1,5 +1,6 @@
 ---
 import Footer from "../../components/Footer.astro";
+import Indexcard from "../../components/Indexcard.astro";
 import Topbar from "../../components/Topbar.astro";
 
 export async function getStaticPaths() {
@@ -26,10 +27,32 @@ const { program } = Astro.props;
 ---
 
 <Topbar />
-<section>
-  <h1></h1>
-  <div></div>
-  <h1>{program.navn}</h1>
-  <img src={`/billeder/${program.billede}`} alt="event Billede" />
+<h1>{program.eventName}</h1>
+<section class="slugGrid">
+  <div class="textLeft">
+    <h2>{program.time}</h2>
+    <h3>{program.stage}</h3>
+  </div>
+  <div>
+    <img src={`/billeder/${program.billede}`} alt="event Billede" />
+  </div>
 </section>
-<Footer />
+
+<footer>
+  <Footer />
+</footer>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  .slugGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .textLeft {
+    text-align: center;
+  }
+</style>
