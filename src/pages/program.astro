@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 const URL = "https://urmmxgualjwoaryoaljr.supabase.co/rest/v1/Program";
 import styles from "../styles/styles.css";
 import Stage from "../components/Stage.astro";
+import Hamburger from "../components/Hamburger.astro";
 
 const options = {
   headers: {
@@ -31,6 +32,7 @@ console.log("SKLDKLSDK", mainStage);
     <title>Astro</title>
   </head>
   <body>
+    <Hamburger/>
     <Topbar />
     <main>
       <h1>Program 2023</h1>
@@ -53,6 +55,11 @@ console.log("SKLDKLSDK", mainStage);
     grid-template-columns: repeat(auto-fill, minmax(221px, 1fr));
     gap: 10rem;
     margin: 5rem;
+  }
+
+  body {
+    width: 80%;
+    margin: auto;
   }
 
   main {
