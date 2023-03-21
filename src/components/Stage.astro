@@ -5,7 +5,13 @@ const { stages, stageTxt } = Astro.props;
 
 <h2>{stageTxt}</h2>
 <div class="mainGrid">
-  {stages.map((program) => <Programkort link={"/underside/" + program.slug} eventName={program.eventName} stage={program.stage} time={program.time} billede={`/billeder/${program.billede}`} />)}
+  {stages.map((program) => 
+  <Programkort link={"/underside/" + program.slug} 
+  eventName={program.eventName} 
+  stage={program.stage} 
+  time={program.time} 
+  group={program.group}
+  billede={`/billeder/${program.billede}`} />)}
   <!--    {stages.map((program) => <Programkort link={"/program" + program.id} eventName={program.eventName} stage={program.stage} time={program.time} billede={`/billeder/${program.billede}`} />)} -->
 </div>
 
